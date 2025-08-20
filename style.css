@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | VoltEdge Supply</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Contact VoltEdge Supply</h1>
+    <p>Low Voltage. High Reliability.</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h1>Need a quote, spec sheet, or quick answer?</h1>
+    <p>We specialize in fast, accurate support for MRO teams and contractors. Let us know what you're working on.</p>
+
+    <p><strong>Email:</strong> <a href="mailto:voltedgesupplysales@gmail.com">voltedgesupplysales@gmail.com</a><br>
+    <strong>Phone:</strong> (555) 123-4567 (placeholder)<br>
+    <strong>Response Time:</strong> Within 24 business hours</p>
+
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="company">Company:</label>
+      <input type="text" id="company" name="company">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="phone">Phone (optional):</label>
+      <input type="text" id="phone" name="phone">
+
+      <label for="message">What do you need help with?</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    VoltEdge Supply © 2025 | <a href="https://github.com" style="color:#ccc;">GitHub Repo</a> | Privacy
+  </footer>
+</body>
+</html>
