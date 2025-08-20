@@ -1,45 +1,75 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | VoltEdge Supply</title>
+  <meta name="description" content="Contact VoltEdge Supply for fast quotes on ABB low‑voltage components. Built for MRO teams and contractors." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>VoltEdge Supply</h1>
-    <p>Low Voltage. High Reliability.</p>
-  </header>  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>  <main>
-    <h1>Need a quote, spec sheet, or quick answer?</h1>
-    <p>We specialize in fast, accurate support for MRO teams and contractors. Let us know what you're working on.</p><p><strong>Email:</strong> <a href="mailto:voltedgesupplysales@gmail.com">voltedgesupplysales@gmail.com</a><br>
-<strong>Phone:</strong> (555) 123-4567 (placeholder)<br>
-<strong>Response Time:</strong> Within 24 business hours</p>
+    <h1>Contact VoltEdge Supply</h1>
+    <p class="muted">Low Voltage. High Reliability.</p>
+  </header>
 
-<form>
-  <label for="name">Name:</label>
-  <input type="text" id="name" name="name">
+  <nav>
+    <div class="container">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-  <label for="company">Company:</label>
-  <input type="text" id="company" name="company">
+  <main>
+    <h1 class="center">Need a quote, spec sheet, or quick answer?</h1>
+    <p class="center muted">We specialize in fast, accurate support for MRO teams and contractors. Send part numbers, quantities, and your need‑by date—we’ll take it from there.</p>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email">
+    <div class="grid-2">
+      <!-- Contact Form (mailto fallback) -->
+      <form action="mailto:voltedgesupplysales@gmail.com" method="post" enctype="text/plain" class="card stack">
+        <h2>Request a Quote</h2>
+        <label for="name">Name</label>
+        <input id="name" name="Name" type="text" placeholder="Your full name" required />
 
-  <label for="phone">Phone (optional):</label>
-  <input type="text" id="phone" name="phone">
+        <label for="company">Company</label>
+        <input id="company" name="Company" type="text" placeholder="Your company or team" />
 
-  <label for="message">What do you need help with?</label>
-  <textarea id="message" name="message" rows="5"></textarea>
+        <label for="email">Email</label>
+        <input id="email" name="Email" type="email" placeholder="you@company.com" required />
 
-  <button type="submit">Submit</button>
-</form>
+        <label for="phone">Phone (optional)</label>
+        <input id="phone" name="Phone" type="text" placeholder="(555) 123-4567" />
 
-  </main>  <footer>
-    VoltEdge Supply © 2025 | <a href="https://github.com" style="color:#ccc;">GitHub Repo</a> | Privacy
+        <label for="details">Part numbers / details</label>
+        <textarea id="details" name="Details" rows="6" placeholder="e.g., S203‑C20 (qty 6), AF09‑30‑10‑11 (qty 2); Need by 2025‑09‑01"></textarea>
+        <span class="help">Submitting will open your default email client with the form data. You can also email us directly.</span>
+
+        <button type="submit" class="btn">Send Request</button>
+      </form>
+
+      <!-- Direct Contact Card -->
+      <div class="card stack">
+        <h2>Direct Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:voltedgesupplysales@gmail.com">voltedgesupplysales@gmail.com</a></p>
+        <p><strong>Phone:</strong> (555) 123‑4567 <span class="muted">(placeholder)</span></p>
+        <p><strong>Response time:</strong> Within 24 business hours</p>
+        <hr style="border:none;border-top:1px solid var(--border);" />
+        <h2>Helpful to Include</h2>
+        <ul class="stack-sm">
+          <li>Part numbers and quantities</li>
+          <li>Desired brand or ABB equivalent</li>
+          <li>Ship‑to location &amp; need‑by date</li>
+        </ul>
+        <p class="muted">We’ll confirm availability, lead time, and pricing before invoicing.</p>
+      </div>
+    </div>
+
+    <p class="muted center" style="margin-top:1rem;">VoltEdge Supply is an independent reseller. Brand names are used for identification only.</p>
+  </main>
+
+  <footer>
+    VoltEdge Supply © 2025 • <a href="https://github.com">GitHub</a> • Privacy
   </footer>
 </body>
-  </html>
+</html>
