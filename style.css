@@ -1,41 +1,62 @@
-/* VoltEdge Supply — Global Styles v2 (old‑school, no frameworks) */
+/* VoltEdge Supply — Professional UI Theme (framework‑free)
+   v3 — refined typography, spacing, and enterprise visual language
+=============================================================== */
 
-/* ====== CSS Variables (Brand) ====== */
+/* ===== Brand Tokens ===== */
 :root {
-  --brand: #0072CE;        /* Strong Blue */
-  --brand-600: #005fa3;    /* Hover */
-  --brand-700: #074a86;    /* Active */
-  --accent: #F5A623;       /* Vibrant Orange */
+  /* Brand palette */
+  --brand: #0072CE;        /* Primary blue */
+  --brand-600: #0A61AF;    /* Hover */
+  --brand-700: #084E8B;    /* Active */
+  --accent: #F5A623;       /* Accent orange */
 
-  --bg: #f6f7fb;           /* App background */
-  --surface: #ffffff;      /* Card/surface */
-  --text: #1a1f2b;         /* Primary text */
-  --muted: #5b6474;        /* Secondary text */
-  --border: #e6e8ee;       /* Hairline borders */
+  /* Neutral system */
+  --bg: #F3F5F8;           /* App background */
+  --surface: #FFFFFF;      /* Cards / surfaces */
+  --text: #1B1F24;         /* Primary text */
+  --muted: #667085;        /* Secondary text */
+  --border: #E6E9EF;       /* Hairline borders */
 
-  --radius: 12px;          /* Global rounding */
-  --shadow: 0 10px 24px rgba(0,0,0,0.08);
+  /* States */
+  --success: #12824C;
+  --warning: #B05400;
+  --danger: #B42318;
+
+  /* Metrics */
+  --radius: 10px;
+  --shadow-sm: 0 1px 2px rgba(16,24,40,.06);
+  --shadow:    0 8px 20px rgba(16,24,40,.08);
+
+  /* Typography scale */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --fs-300: .9375rem;  /* 15px */
+  --fs-400: 1rem;      /* 16px */
+  --fs-500: 1.125rem;  /* 18px */
+  --fs-600: 1.25rem;   /* 20px */
+  --fs-700: 1.5rem;    /* 24px */
+  --fs-800: 1.875rem;  /* 30px */
+  --fs-900: 2.25rem;   /* 36px */
 }
 
-/* ====== Base Reset (minimal) ====== */
+/* ===== Base Reset ===== */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  line-height: 1.55;
+  font-family: var(--font-sans);
+  font-size: var(--fs-400);
+  line-height: 1.6;
   background: var(--bg);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-img { max-width: 100%; height: auto; display: block; }
+img { display: block; max-width: 100%; height: auto; }
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* ====== Layout Helpers ====== */
-.container {
-  width: min(1100px, 92%);
-  margin: 0 auto;
-}
+/* ===== Layout ===== */
+.container { width: min(1120px, 92%); margin-inline: auto; }
 .section { padding: 2.5rem 0; }
 .card {
   background: var(--surface);
@@ -44,44 +65,57 @@ a:hover { text-decoration: underline; }
   box-shadow: var(--shadow);
 }
 
-/* ====== Header & Nav ====== */
+/* ===== Header / Nav ===== */
 header {
-  background: linear-gradient(135deg, #0f1e33 0%, #0b1526 100%);
+  background: linear-gradient(180deg, #0F1E33 0%, #0B1526 100%);
   color: #fff;
-  padding: 1.75rem 0 1.25rem;
   text-align: center;
+  padding: 1.5rem 0 1.1rem;
 }
-header h1 { margin: 0 0 .25rem; font-size: 2rem; letter-spacing: .2px; }
-header p { margin: 0; color: #c7d1e1; }
+header h1 { margin: 0 0 .25rem; font-size: var(--fs-800); letter-spacing: .2px; }
+header p  { margin: 0; color: #C7D1E1; font-size: var(--fs-400); }
 
-nav {
-  background: #121a2a;
-  border-bottom: 1px solid #0e1422;
-}
-nav .container { display: flex; gap: .25rem; justify-content: center; }
+nav { background: #111827; border-bottom: 1px solid #0B1220; }
+nav .container { display: flex; justify-content: center; gap: .25rem; flex-wrap: wrap; }
 nav a {
-  color: #eaf2ff;
-  padding: .9rem 1.1rem;
-  display: inline-block;
+  color: #E5EDF9;
+  padding: .85rem 1rem;
   border-radius: 8px;
+  display: inline-block;
 }
-nav a:hover { background: rgba(255,255,255,0.06); text-decoration: none; }
-nav a.active { background: rgba(0,114,206,0.18); color: #fff; }
+nav a:hover { background: rgba(255,255,255,.06); text-decoration: none; }
+nav a.active { background: rgba(0,114,206,.18); color: #fff; }
 
-/* ====== Hero ====== */
+/* ===== Hero ===== */
 .hero {
-  background: var(--surface);
+  width: min(1000px, 94%);
   margin: 1.25rem auto 1rem;
   padding: 2.25rem 1.5rem;
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   text-align: center;
 }
-.hero h1 { font-size: 2.2rem; margin: 0 0 .5rem; }
-.hero p  { color: var(--muted); margin: 0 auto 1rem; max-width: 720px; }
+.hero h1 { font-size: var(--fs-900); margin: 0 0 .5rem; }
+.hero p  { margin: 0 auto 1rem; color: var(--muted); max-width: 760px; font-size: var(--fs-500); }
+.badge { display: inline-block; padding: .2rem .55rem; border-radius: 999px; background: rgba(0,114,206,.10); color: #0B4C83; font-weight: 600; font-size: .85rem; }
 
-/* ====== Buttons ====== */
+/* ===== Sections ===== */
+section, main {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  width: min(920px, 94%);
+  margin: 1rem auto;
+  padding: 1.75rem 1.25rem;
+}
+section h2, main h1, main h2 { margin-top: 0; font-size: var(--fs-700); }
+section ul, section ol { margin: .5rem 0 0 1.1rem; }
+section li { margin: .4rem 0; }
+
+/* ===== Buttons ===== */
 .btn {
   display: inline-block;
   margin: .5rem .4rem 0;
@@ -91,95 +125,76 @@ nav a.active { background: rgba(0,114,206,0.18); color: #fff; }
   border-radius: 10px;
   border: 1px solid transparent;
   font-weight: 600;
-  transition: transform .12s ease, background-color .12s ease, box-shadow .12s ease;
+  letter-spacing: .2px;
+  transition: background-color .12s ease, transform .12s ease, box-shadow .12s ease;
 }
 .btn:hover { background: var(--brand-600); text-decoration: none; }
 .btn:active { background: var(--brand-700); transform: translateY(1px); }
-.btn.ghost {
-  background: transparent;
-  color: var(--brand);
-  border-color: var(--brand);
-}
-.btn.ghost:hover { background: rgba(0,114,206,0.08); }
+.btn.ghost { background: transparent; color: var(--brand); border-color: var(--brand); }
+.btn.ghost:hover { background: rgba(0,114,206,.08); }
 
-/* ====== Sections / Main ====== */
-section, main {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  margin: 1rem auto;
-  padding: 1.75rem 1.25rem;
-  width: min(900px, 92%);
-}
-section h2, main h1, main h2 { margin-top: 0; }
-section ul { margin: .5rem 0 0 1rem; }
-section li { margin: .4rem 0; }
-
-/* ====== Forms ====== */
-form { display: grid; gap: .9rem; }
+/* ===== Forms ===== */
+form { display: grid; gap: 1rem; }
 label { font-weight: 600; color: var(--text); }
 input, textarea {
-  padding: .65rem .75rem;
-  font-size: 1rem;
+  padding: .7rem .8rem;
+  font-size: var(--fs-400);
   border: 1px solid var(--border);
   border-radius: 10px;
   background: #fff;
   outline: none;
-  transition: box-shadow .12s ease, border-color .12s ease;
+  transition: border-color .12s ease, box-shadow .12s ease;
 }
-input:focus, textarea:focus {
-  border-color: var(--brand);
-  box-shadow: 0 0 0 3px rgba(0,114,206,0.18);
-}
+input:focus, textarea:focus { border-color: var(--brand); box-shadow: 0 0 0 3px rgba(0,114,206,.18); }
 textarea { resize: vertical; min-height: 140px; }
-button {
-  padding: .8rem 1.15rem;
-  background: var(--brand);
-  color: #fff;
-  border: 1px solid var(--brand-600);
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-}
-button:hover { background: var(--brand-600); }
-button:active { background: var(--brand-700); }
+.help { color: var(--muted); font-size: var(--fs-300); }
+.input-error { border-color: var(--danger); box-shadow: 0 0 0 3px rgba(180,35,24,.12); }
 
-/* ====== Footer ====== */
+/* ===== Tables (for future inventory) ===== */
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .75rem .8rem; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: #F8FAFC; font-weight: 700; font-size: var(--fs-400); }
+tr:hover td { background: #FAFBFF; }
+
+/* ===== Footer ===== */
 footer {
-  background: #0f1626;
-  color: #c7d1e1;
+  background: #0F1626;
+  color: #C7D1E1;
   text-align: center;
   padding: 1.1rem .75rem;
   font-size: .95rem;
   margin-top: 2rem;
 }
-footer a { color: #dfe9ff; text-decoration: underline; }
+footer a { color: #DFE9FF; text-decoration: underline; }
 
-/* ====== Utilities ====== */
+/* ===== Utilities ===== */
 .muted { color: var(--muted); }
 .center { text-align: center; }
-.badge {
-  display: inline-block;
-  padding: .2rem .5rem;
-  border-radius: 999px;
-  background: rgba(0,114,206,0.1);
-  color: var(--brand-700);
-  font-weight: 600;
-  font-size: .85rem;
-}
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.stack-sm > * + * { margin-top: .5rem; }
+.stack > * + *    { margin-top: .9rem; }
+.stack-lg > * + * { margin-top: 1.25rem; }
 
-/* ====== Responsive ====== */
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .grid-2 { grid-template-columns: 1fr; }
+}
 @media (max-width: 720px) {
-  header h1 { font-size: 1.65rem; }
-  .hero h1 { font-size: 1.8rem; }
-  nav .container { flex-wrap: wrap; }
+  header h1 { font-size: var(--fs-700); }
+  .hero h1   { font-size: var(--fs-800); }
   nav a { padding: .75rem .9rem; }
   section, main { padding: 1.25rem .9rem; }
 }
 
-/* ====== Accessibility ====== */
-:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(245,166,35,0.35); border-radius: 8px; }
+/* ===== Accessibility ===== */
+:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(245,166,35,.35); border-radius: 8px; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
+}
+
+/* ===== Print (simple letter output) ===== */
+@media print {
+  body { background: #fff; }
+  header, nav, footer { display: none; }
+  section, main, .hero { width: 100%; box-shadow: none; border: 1px solid #ddd; }
 }
