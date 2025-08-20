@@ -1,0 +1,144 @@
+---
+title: Catalog | VoltEdge Supply
+description: Browse ABB low‑voltage parts: breakers, contactors, disconnects, motor starters, surge protection, and fuse holders.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catalog | VoltEdge Supply</title>
+  <meta name="description" content="Browse ABB low‑voltage parts: breakers, contactors, disconnects, motor starters, surge protection, and fuse holders." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* small catalog-only helpers (kept minimal) */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    @media (max-width: 980px){ .grid-3 { grid-template-columns: repeat(2, 1fr);} }
+    @media (max-width: 640px){ .grid-3 { grid-template-columns: 1fr; } }
+    .catalog-card img { width: 100%; height: 180px; object-fit: contain; background:#fff; border:1px solid var(--border); border-radius: 8px; }
+    .sku { font-weight: 700; letter-spacing: .2px; }
+    .tiny { font-size: .9rem; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>VoltEdge Supply</h1>
+    <p class="muted">Low Voltage. High Reliability.</p>
+  </header>
+
+  {% include nav.html %}
+
+  <main class="stack">
+    <h1 class="center">ABB Low‑Voltage Catalog</h1>
+    <p class="center muted">Starter set of popular ABB part numbers. Photos will render when you place the image files in <code>/images/</code> (see instructions we provide).</p>
+
+    <div class="grid-3">
+      <!-- S203-B20 -->
+      <div class="card catalog-card stack">
+        <img src="images/s203-b20.jpg" alt="ABB S203‑B20 miniature circuit breaker" />
+        <div>
+          <div class="sku">S203‑B20</div>
+          <div class="tiny">System pro M compact • 3‑pole • B‑curve • 20 A</div>
+        </div>
+        <a href="https://new.abb.com/products/2CDS253001R0205/s203-b20" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- S203-C20 -->
+      <div class="card catalog-card stack">
+        <img src="images/s203-c20.jpg" alt="ABB S203‑C20 miniature circuit breaker" />
+        <div>
+          <div class="sku">S203‑C20</div>
+          <div class="tiny">System pro M compact • 3‑pole • C‑curve • 20 A</div>
+        </div>
+        <a href="https://www.newark.com/abb/s203-c20/circuit-breaker-thermal-mag-3/dp/55Y3806" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- SU201M-K1 -->
+      <div class="card catalog-card stack">
+        <img src="images/su201m-k1.jpg" alt="ABB SU201M‑K1 miniature circuit breaker" />
+        <div>
+          <div class="sku">SU201M‑K1</div>
+          <div class="tiny">1‑pole • K‑curve • 1 A</div>
+        </div>
+        <a href="https://us.rs-online.com/product/abb/su201m-k1/70929749/" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- AF09-30-10-11 -->
+      <div class="card catalog-card stack">
+        <img src="images/af09-30-10-11.jpg" alt="ABB AF09‑30‑10‑11 contactor" />
+        <div>
+          <div class="sku">AF09‑30‑10‑11</div>
+          <div class="tiny">3‑pole contactor • 1 NO aux • 24–60 VAC/DC coil</div>
+        </div>
+        <a href="https://new.abb.com/products/1SBL137001R1110/af09-30-10-11" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- AF12-30-10-13 -->
+      <div class="card catalog-card stack">
+        <img src="images/af12-30-10-13.jpg" alt="ABB AF12‑30‑10‑13 contactor" />
+        <div>
+          <div class="sku">AF12‑30‑10‑13</div>
+          <div class="tiny">3‑pole contactor • 1 NO aux • 100–250 VAC/DC coil</div>
+        </div>
+        <a href="https://us.rs-online.com/product/abb/af12-30-10-13/" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- MS116‑6.3 -->
+      <div class="card catalog-card stack">
+        <img src="images/ms116-6-3.jpg" alt="ABB MS116 manual motor starter" />
+        <div>
+          <div class="sku">MS116‑6.3</div>
+          <div class="tiny">Manual motor starter • 4–6.3 A</div>
+        </div>
+        <a href="https://us.rs-online.com/product/abb/ms116-6-3/70318420/" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- OT63F3 -->
+      <div class="card catalog-card stack">
+        <img src="images/ot63f3.jpg" alt="ABB OT63F3 disconnect switch" />
+        <div>
+          <div class="sku">OT63F3</div>
+          <div class="tiny">Non‑fusible disconnect switch • 60 A • 3‑pole</div>
+        </div>
+        <a href="https://us.rs-online.com/product/abb/ot63f3/70094252/" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- OVR T2 3N 40‑275S P TS QS -->
+      <div class="card catalog-card stack">
+        <img src="images/ovr-t2-3n-40-275s.jpg" alt="ABB OVR T2 surge protective device" />
+        <div>
+          <div class="sku">OVR T2 3N 40‑275S P TS QS</div>
+          <div class="tiny">Type 2 SPD • 277/480 V Wye • DIN‑rail</div>
+        </div>
+        <a href="https://electrification.us.abb.com/products/surge-protective-devices/ovr-t2-ac-surge-protective-devices" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- E91/125 (E90 series) -->
+      <div class="card catalog-card stack">
+        <img src="images/e91-125.jpg" alt="ABB E90 series fuse holder E91/125" />
+        <div>
+          <div class="sku">E91/125 (E90 series)</div>
+          <div class="tiny">Fuse holder • 1‑pole • 125 A • DIN‑rail</div>
+        </div>
+        <a href="https://electrification.us.abb.com/products/circuit-breakers/e90-fuse-holders" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+
+      <!-- E93/30CC (E90 series) -->
+      <div class="card catalog-card stack">
+        <img src="images/e93-30cc.jpg" alt="ABB E90 series fuse holder E93/30CC" />
+        <div>
+          <div class="sku">E93/30CC (E90 series)</div>
+          <div class="tiny">Fuse holder • 3‑pole • Class CC • 30 A</div>
+        </div>
+        <a href="https://new.abb.com/low-voltage/products/system-pro-m/protection-and-safety-devices/fuse-holders" class="btn ghost" target="_blank" rel="noopener">Details</a>
+      </div>
+    </div>
+
+    <p class="muted center" style="margin-top:1rem;">Images are for reference. Download official images and save into <code>/images/</code> using the file names shown above.</p>
+  </main>
+
+  <footer>
+    VoltEdge Supply © 2025 • <a href="https://github.com">GitHub</a> • Privacy
+  </footer>
+</body>
+</html>
