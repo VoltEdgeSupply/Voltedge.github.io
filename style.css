@@ -1,5 +1,5 @@
 /* VoltEdge Supply — Professional UI Theme (framework‑free)
-   v3 — refined typography, spacing, and enterprise visual language
+   v3.1 — refined padding & spacing for contact/about cards
 =============================================================== */
 
 /* ===== Brand Tokens ===== */
@@ -63,7 +63,10 @@ a:hover { text-decoration: underline; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  padding: 1.25rem 1.25rem; /* ADDED: internal padding so text doesn’t hug the edge */
 }
+.card h2:first-child { margin-top: 0; } /* trim top when header first */
+.card :last-child { margin-bottom: 0; } /* tidy bottom spacing */
 
 /* ===== Header / Nav ===== */
 header {
@@ -170,7 +173,7 @@ footer a { color: #DFE9FF; text-decoration: underline; }
 /* ===== Utilities ===== */
 .muted { color: var(--muted); }
 .center { text-align: center; }
-.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; } /* increased gap for breathing room */
 .stack-sm > * + * { margin-top: .5rem; }
 .stack > * + *    { margin-top: .9rem; }
 .stack-lg > * + * { margin-top: 1.25rem; }
